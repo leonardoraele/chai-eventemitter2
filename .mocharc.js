@@ -1,5 +1,5 @@
 module.exports =
 {
 	recursive: true,
-	spec: "**/*.test.js",
+	spec: "test/**/*.test.js",
 };

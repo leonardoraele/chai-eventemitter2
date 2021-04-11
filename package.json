@@ -2,9 +2,10 @@
   "name": "chai-eventemitter2",
   "version": "0.1.0",
   "description": "Chai plugin for testing node-style EventEmitters",
-  "main": "chai-eventemitter2",
+  "main": "lib/chai-eventemitter2",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "coverage": "nyc --reporter=html npm test"
   },
   "repository": {
     "type": "git",
@@ -26,10 +27,9 @@
   },
   "homepage": "https://github.com/leonardoraele/chai-eventemitter2#readme",
   "devDependencies": {
-    "mocha": "^8.3.2"
-  },
-  "peerDependencies": {
-    "chai": "^4.0.0"
+    "chai": "^4.3.4",
+    "mocha": "^8.3.2",
+    "nyc": "^15.1.0"
   },
   "dependencies": {
     "deep-equal": "^2.0.5"
