@@ -214,6 +214,11 @@ describe('chai-eventemitter2', function()
 									.on(() => this.emitter.emit('foo', [{_:0, a:{_:0, b:{_:0}}}, {_:0}]))
 							).to.throw(AssertionError);
 						});
+
+						it('handles events with circular references', function()
+						{
+							
+						});
 					});
 
 					describe('deep', function()

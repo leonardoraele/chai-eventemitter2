@@ -107,18 +107,16 @@ See an example in the [usage](#usage) section.
 
 ## Known Issues
 
-- ⚠️ It's unable to validate event arguments with `withArgs` option if the
-arguments have circular refereneces.
+- ⚠️ It doesn't handle circular references in the `withArgs`.
+	The test might break if your event arguments have circular references.
 - ⚠️ It doesn't work with the "not" flag (`.not`).
 	You can work around this issue using the `count` option.
-	(i.e. set the `count` of events you don't want to be emitted to `0`)
+	(i.e. assert that an event is emitted `0` times)
 - ⚠️ Not tested for asynchrony.
 
 ## Disclaimer
 
 Inspired by [fengb/chai-eventemitter](https://github.com/fengb/chai-eventemitter).
-
-I made this package because `fengb/chai-eventemitter` doesn't have features I needed for myself.
 
 ## License
 
