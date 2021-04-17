@@ -28,7 +28,7 @@ This is a [chai](chaijs.com) plugin for testing node-style
 	const chai = require('chai');
 	const eventemitter2 = require('chai-eventemitter2');
 
-	chai.use(eventemitter2);
+	chai.use(eventemitter2());
 	```
 
 ## Usage
