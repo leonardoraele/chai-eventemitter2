@@ -90,7 +90,7 @@ Registers an expected event.
 		This is the default comparison method.
 
 	If `withArgs` option is omitted or is not an array, this option is ignored.
-- `options.withArgs: any[]|(any) => boolean`
+- `options.withArgs: any[]|(...any) => boolean`
 	Used to validate the event arguments.
 	If you pass an array, the plugin will expect the event arguments to match
 	the values of the array.
