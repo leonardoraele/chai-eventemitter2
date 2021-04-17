@@ -1,6 +1,6 @@
 {
   "name": "chai-eventemitter2",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Chai plugin for testing node-style EventEmitters",
   "main": "lib/chai-eventemitter2",
   "scripts": {

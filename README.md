@@ -4,7 +4,7 @@ This is a [chai](chaijs.com) plugin for testing node-style
 
 ## Compatibility
 
-- Node.js 14.5+
+- ECMAScript 2020 (Node.js 14+)
 
 ## Installation
 
