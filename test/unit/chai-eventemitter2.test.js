@@ -111,6 +111,22 @@ describe('chai-eventemitter2', function()
 		{
 			describe('as an array', function()
 			{
+				it('additional events are emitted', function()
+				{
+					expect(() =>
+					{
+						expect(this.emitter)
+							.to.emit('myevent', { withArgs: ['foo'] })
+							.to.emit('myevent', { withArgs: ['bar'] })
+							.on(() =>
+							{
+								this.emitter.emit('myevent', 'foo');
+								this.emitter.emit('myevent', 'baz');
+								this.emitter.emit('myevent', 'bar');
+							});
+					}).to.throw(AssertionError);
+				});
+
 				describe('argsMatch option', function()
 				{
 					before(function()
@@ -213,11 +229,6 @@ describe('chai-eventemitter2', function()
 									.to.emit('foo', { withArgs: [[{a:{b:{c:1}}}, {}]], argsMatch })
 									.on(() => this.emitter.emit('foo', [{_:0, a:{_:0, b:{_:0}}}, {_:0}]))
 							).to.throw(AssertionError);
-						});
-
-						it('handles events with circular references', function()
-						{
-							
 						});
 					});
 

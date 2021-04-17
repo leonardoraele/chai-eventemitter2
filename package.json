@@ -1,6 +1,6 @@
 {
   "name": "chai-eventemitter2",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Chai plugin for testing node-style EventEmitters",
   "main": "lib/chai-eventemitter2",
   "scripts": {
@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "deep-equal": "^2.0.5",
+    "lodash.groupby": "^4.6.0",
     "lodash.ismatch": "^4.4.0"
   }
 }
